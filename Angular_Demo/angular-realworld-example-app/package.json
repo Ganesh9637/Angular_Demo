@@ -6,6 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint --force",
     "prepare": "husky install"
@@ -25,7 +26,7 @@
     "@angular/router": "18.0.0",
     "@rx-angular/cdk": "18.0.0",
     "@rx-angular/template": "18.0.0",
-    "angular-realworld": "file:.",
+    "angular-realworld": "file:",
     "marked": "^11.1.0",
     "rxjs": "^7.4.0",
     "tslib": "^2.3.0",
