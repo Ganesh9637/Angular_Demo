@@ -60,7 +60,7 @@ Resources:
               Service: codebuild.amazonaws.com
             Action: sts:AssumeRole
       ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/AmazonECR-FullAccess
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
         - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
       Policies:
         - PolicyName: CodeBuildAccess
