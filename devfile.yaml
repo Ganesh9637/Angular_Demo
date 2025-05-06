@@ -1,0 +1,28 @@
+schemaVersion: 2.0.0
+metadata:
+  name: angular-demo
+  version: 1.0.0
+  displayName: Angular Demo Application
+  description: Angular RealWorld Example Application
+components:
+  - name: dev
+    container:
+      image: public.ecr.aws/aws-mde/universal-image:latest
+      mountSources: true
+      memoryLimit: 4Gi
+commands:
+  - id: install
+    exec:
+      component: dev
+      commandLine: "cd Angular_Demo/angular-realworld-example-app && npm install"
+      workingDir: ${PROJECT_SOURCE}
+  - id: build
+    exec:
+      component: dev
+      commandLine: "cd Angular_Demo/angular-realworld-example-app && npm run build"
+      workingDir: ${PROJECT_SOURCE}
+  - id: test
+    exec:
+      component: dev
+      commandLine: "cd Angular_Demo/angular-realworld-example-app && npm run test -- --watch=false --browsers=ChromeHeadless"
+      workingDir: ${PROJECT_SOURCE}
