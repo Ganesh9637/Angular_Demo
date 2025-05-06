@@ -4,7 +4,7 @@ WORKDIR /app
 COPY Angular_Demo/angular-realworld-example-app/package.json Angular_Demo/angular-realworld-example-app/package-lock.json* ./
 RUN npm install
 COPY Angular_Demo/angular-realworld-example-app/ .
-RUN npm run build -- --configuration production
+RUN npm run build
 
 # Production stage
 FROM nginx:alpine
