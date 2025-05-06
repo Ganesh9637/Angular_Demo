@@ -1,5 +1,6 @@
 # Build stage
 FROM node:20-alpine as build
+
 RUN npm install -g @angular/cli
 
 WORKDIR /app
