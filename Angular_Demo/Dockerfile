@@ -1,9 +1,12 @@
 # Build stage
 FROM node:20-alpine as build
+RUN npm install -g @angular/cli
+
 WORKDIR /app
 COPY angular-realworld-example-app/package.json angular-realworld-example-app/package-lock.json* ./
 RUN npm install
 COPY angular-realworld-example-app/ .
+RUN 
 RUN npm run build -- --configuration production
 
 # Production stage
