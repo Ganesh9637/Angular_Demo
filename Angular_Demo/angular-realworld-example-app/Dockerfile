@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm install
 COPY . .
-RUN  npm audit fix --force
+RUN npm audit fix --force
 RUN npm run build:prod
 
 # Production stage
